@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <title>タイトルが入ります</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/import.css">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="js/module/ofi.min.js"></script>
+  <script src="js/module/jquery.nice-select.js"></script>
+  <div id="page-wrapper" class="pb40-tb">
+    <div class="page-inner">
+      <!-- Header -->
+      <header>
+        <div class="h-wrapper">
+          <div class="h-left">
+            <div class="h-logo"><img src="./img/layout/header/logo.png" alt="evaGraphy"></div>
+            <nav class="h-nav">
+              <ul class="list">
+                <li class="item">
+                  <a href="#" class="txt">公式ホーム</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="txt">はじめての方へ</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="txt">お知らせ一覧</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="txt">お問い合わせ</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="txt">利用規約</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="txt">プライバシーポリシー</a>
+                </li>
+                <li class="item">
+                  <a href="#" class="txt">運営会社</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="h-right">
+            <div class="h-product-register hover-all"><a href="#"></a><img src="./img/bg/icon01.png" alt=""><span
+                class="pc">作品登録</span></div>
+            <div class="h-profile"><a href="#" class="ofi"><img src="./img/layout/header/icon_arr.png" alt=""></a></div>
+          </div>
+        </div>
+        <nav class="g-menu">
+          <ul class="h-menu">
+            <li class="item active">
+              <a href="#" class="txt">ホーム</a>
+            </li>
+            <li class="item">
+              <a href="#" class="txt">作品</a>
+            </li>
+            <li class="item">
+              <a href="#" class="txt">エヴァグラファー</a>
+            </li>
+            <li class="item disable">
+              <a href="#" class="txt">グループ</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- /Header -->
+      <!-- Main -->
+      <main>
+        <div class="l-main">
+          <div class="inner-wrapper02">
+            <p class="common-ttl02 pl10-tb">基本情報設定</p>
+            <div class="evagrapher-box02 seperate mb40 mb0-tb">
+              <div class="evagrapher-info upload-box">
+                <div class="img-box uploaded-img ofi img-cover">
+                  <img src="./img/content/person02.png" alt=""  data-preview-id="imgpreview1" id="">
+                </div>
+                <div class="content-box">
+                  <div>
+                    <p class="name">村岡 大樹</p>
+                    <div>
+                      <label for="logo-upload">
+                        <span class="edit-btn">プロフィール写真を変更</span>
+                        <input type="file" id="logo-upload" data-upload-id="idupload-1" accept="image/*">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form action="" class="edit-form">
+              <div class="form-ttl">プロフィール</div>
+              <div class="mb50 mb35-tb">
+                <textarea class="input-textarea" name="" id=""
+                  placeholder="（仮）1980年生まれ。アメリカ留学後、心臓血管外科専門医として外科治療に専念してきました。生活習慣病の予防及び治療にも、循環器疾患の患者さんと関わってきた経験を活かして積極的に取り組んでいます。"></textarea>
+              </div>
+              <div class="form-ttl">SNS</div>
+              <div class="input-sns mb15"><span class="txt">https://www.facebook.com/</span><input id="" type="text"
+                  class="input-txt"></div>
+              <div class="input-sns mb40"><span class="txt">https://twitter.com/</span><input id="" type="text"
+                  class="input-txt"></div>
+              <div class="form-ttl">お名前</div>
+              <div class="input-wrapper01 mb50 mb35-tb">
+                <div class="input-box"><input placeholder="姓" id="" type="text" class="input-txt"></div>
+                <div class="input-box"><input placeholder="名" id="" type="text" class="input-txt"></div>
+              </div>
+              <div class="form-ttl">ふりがな</div>
+              <div class="input-wrapper01 mb50 mb35-tb">
+                <div class="input-box"><input placeholder="せい" id="" type="text" class="input-txt"></div>
+                <div class="input-box"><input placeholder="めい" id="" type="text" class="input-txt"></div>
+              </div>
+              <div class="form-ttl">生年月日</div>
+              <div class="clearfix mb50 mb35-tb">
+                <div class="left-box mr20 mr10-tb">
+                  <select class="nice-select wide">
+                    <option value="1991">1991年</option>
+                    <option value="1992">1992年</option>
+                  </select>
+                </div>
+                <div class="left-box mr20 mr10-tb">
+                  <select class="nice-select wide">
+                    <option value="1月">1月</option>
+                    <option value="2月">2月</option>
+                  </select>
+                </div>
+                <div class="left-box">
+                  <select class="nice-select wide">
+                    <option value="1日">1日</option>
+                    <option value="2日">2日</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-ttl">性別</div>
+              <div class="input-wrapper02 mb50 mb35-tb">
+                <div class="input-box">
+                  <input type="radio" name="gender" class="input-radio" value="0" id="gender01"><label for="gender01"
+                    class="w100">男性</label>
+                </div>
+                <div class="input-box">
+                  <input type="radio" name="gender" class="input-radio" value="1" id="gender02"><label for="gender02"
+                    class="w100">女性</label>
+                </div>
+                <div class="input-box">
+                  <input type="radio" name="gender" class="input-radio" value="2" id="gender03"><label for="gender03"
+                    class="w100">無回答</label>
+                </div>
+              </div>
+              <div class="float mb50 mb35-tb">
+                <div class="left-box mb35-tb" style="width: 390px">
+                  <div class="form-ttl">メールアドレス</div>
+                  <div class="mb10"><input placeholder="evagrapher@info.com" id="" type="text" class="input-txt"></div>
+                  <p>※メールアドレスは他のEVAGrapherに公開されます</p>
+                </div>
+                <div class="right-box" style="width: 390px">
+                  <div class="form-ttl">メールアドレス（確認用）</div>
+                  <div><input placeholder="evagrapher@info.com" id="" type="text" class="input-txt"></div>
+                </div>
+              </div>
+              <div class="float mb50 mb35-tb">
+                <div class="left-box" style="width: 390px">
+                  <div class="form-ttl">現在の職業</div>
+                  <div>
+                    <select class="nice-select mb35-tb wide">
+                      <option value="0">公務員</option>
+                      <option value="1">経営者・役員</option>
+                      <option value="2">会社員</option>
+                      <option value="3">自営業</option>
+                      <option value="4">自由業</option>
+                      <option value="5">専業主婦</option>
+                      <option value="6">パート・アルバイト</option>
+                      <option value="7">学生</option>
+                      <option value="8">その他</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="right-box" style="width: 390px">
+                  <div class="form-ttl">活動エリア</div>
+                  <div>
+                    <select class="nice-select wide">
+                      <option value="0">北海道エリア</option>
+                      <option value="1">東北エリア</option>
+                      <option value="2">関東エリア</option>
+                      <option value="3">中部エリア</option>
+                      <option value="4">近畿エリア</option>
+                      <option value="5">中国エリア</option>
+                      <option value="6">四国エリア</option>
+                      <option value="7">九州・沖縄エリア</option>
+                      <option value="8">海外</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-ttl">臨床経験</div>
+              <div class="exp-wrapper mb25 mb15-tb">
+                <div class="exp-block">
+                  <div class="mb30 exp-input">
+                    <div class="left-input" style="width: 240px">
+                      <select class="nice-select wide">
+                        <option value="0">医療</option>
+                        <option value="1">介護</option>
+                        <option value="2">その他</option>
+                        <option value="3">経験なし</option>
+                      </select>
+                    </div>
+                    <div class="right-input" style="width: 100px">
+                      <select class="nice-select wide">
+                        <option value="1">1年</option>
+                        <option value="2">2年</option>
+                        <option value="3">3年</option>
+                        <option value="4">4年</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-ttl fw400">その他の場合</div>
+                <div class="exp-input mb25 mb15-tb">
+                  <div class="left-input" style="width: 320px">
+                    <input id="" type="text" class="input-txt">
+                  </div>
+                  <div class="right-input" style="width: 100px">
+                    <select class="nice-select wide">
+                      <option value="1">1年</option>
+                      <option value="2">2年</option>
+                      <option value="3">3年</option>
+                      <option value="4">4年</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mb50 mb35-tb"><span id="add-exp" class="add-btn w100">臨床経験を追加</span></div>
+              <div class="form-ttl">紹介者</div>
+              <div class="mb60 mb0-tb mw100-tb" style="max-width: 315px"><input id="intro_code" type="text"
+                  value="山本 太郎" class="input-txt"></div>
+              <div class="center-text send-btn"><button class="button01" type="submit">保存する</button></div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <!-- /Main -->
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="f-wrapper">
+        <div class="logo"><img src="./img/bg/logo_mamoru2.png" alt="mamoru2"></div>
+        <div class="copy">© 2019 mamoruwomamoru org.</div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+  </div>
+  <script>
+    $(function () {
+      $("#add-exp").click(function () {
+        var e = '<div class="mb30 exp-input">' + '<div class="left-input" style="width: 240px">' +
+          '<select class="nice-select wide" style="display: none;">' + '<option value="0">医療</option>' +
+          '<option value="1">介護</option>' + '<option value="2">その他</option>' +
+          '<option value="3">経験なし</option>' +
+          '</select><div class="nice-select wide" tabindex="0"><span class="current">医療</span><ul class="list"><li data-value="0" class="option selected">医療</li><li data-value="1" class="option">介護</li><li data-value="2" class="option">その他</li><li data-value="3" class="option">経験なし</li></ul></div>' +
+          '</div>' + '<div class="right-input" style="width: 100px">' +
+          '<select class="nice-select wide" style="display: none;">' + '<option value="1">1年</option>' +
+          '<option value="2">2年</option>' + '<option value="3">3年</option>' + '<option value="4">4年</option>' +
+          '</select><div class="nice-select wide" tabindex="0"><span class="current">1年</span><ul class="list"><li data-value="1" class="option selected">1年</li><li data-value="2" class="option">2年</li><li data-value="3" class="option">3年</li><li data-value="4" class="option">4年</li></ul></div>' +
+          '</div>' + '</div>';
+        $(".exp-block").after(e);
+      });
+    });
+  </script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

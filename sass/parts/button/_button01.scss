@@ -1,0 +1,26 @@
+@mixin button01 {
+  display: inline-block;
+  transition: all .3s ease;
+  color: #fff;
+  background: $primary;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 10px;
+  border: 1px solid $primary;
+
+  font: {
+    size: 18px;
+    weight: bold;
+  }
+
+  text: {
+    decoration: none;
+    align: center;
+  }
+
+  &:hover {
+    color: $primary;
+    background: #fff;
+  }
+}

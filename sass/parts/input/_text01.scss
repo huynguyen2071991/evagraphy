@@ -1,0 +1,20 @@
+@mixin text01 {
+  height: 45px;
+  line-height: 43px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 15px;
+  color: #333;
+
+  font: {
+    size: 15px;
+  }
+
+  width: 100%;
+  
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 13px;
+    height: 40px;
+    line-height: 38px;
+  }
+}

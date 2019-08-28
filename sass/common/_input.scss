@@ -1,0 +1,19 @@
+.input-txt {
+  @include text01;
+}
+
+.input-radio {
+  @include radio01;
+}
+
+.input-check {
+  @include check01;
+}
+
+.select {
+  @include select01;
+}
+
+.input-textarea {
+  @include area01;
+}

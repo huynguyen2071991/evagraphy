@@ -1,0 +1,27 @@
+@charset "UTF-8";
+body {
+  color: $base-font-color;
+  font-size: $base-font-size;
+  letter-spacing: $base-letter-spacing;
+  font-family: $base-font;
+}
+
+p {
+  line-height: $base-line-height;
+}
+
+a {
+  @include link;
+  color: $base-link-color;
+  &:hover {
+    color: $base-link-color;
+  }
+}
+
+@if $responsive {
+  @media (max-width: $screen-tb) {
+    body {
+      font-size: $base-font-size-tb;
+    }
+  }
+}

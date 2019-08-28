@@ -1,0 +1,617 @@
+@charset "UTF-8";
+// --------------------------------------------------
+// Common
+// --------------------------------------------------
+.img-cover {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.img-cover img {
+  position: absolute;
+  top: -10000%;
+  right: -10000%;
+  bottom: -10000%;
+  left:-10000%;
+  margin: auto auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  width: 100%;
+  -webkit-transform: scale(.1);
+  -moz-transform: scale(.1);
+  -ms-transform: scale(.1);
+  -o-transform: scale(.1);
+  transform: scale(.1);
+}
+
+.inner-wrapper {
+  width: 740px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $screen-tb) {
+    width: 100%;
+  }
+}
+
+.inner-wrapper02 {
+  width: 798px;
+  margin: 0 auto;
+  
+  @media only screen and (max-width: $screen-tb) {
+    width: 100%;
+  }
+}
+
+.hover-all {
+  position: relative;
+  >a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 99;
+  }
+}
+
+//COLORS
+.f-black {
+  color: #383838;
+}
+
+.send-btn {
+  >button {
+    &:disabled {
+      background: #d0d0d0;
+      border-color: #d0d0d0;
+      pointer-events: none;
+    }
+  }
+
+
+
+  .button01.praise {
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 21px;
+      height: 18px;
+      margin-right: 10px;
+      transform: translateY(2px);
+      background: url(../../img/bg/iconn_praise.png) no-repeat center/contain;
+    }
+
+    &:hover {
+      background: $primary;
+      color: #fff;
+      opacity: 0.7;
+    }
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    >button {
+      max-width: 100%;
+      border-radius: 0;
+      font-size: 14px;
+      padding: 8.5px 10px;
+    }
+  }
+}
+
+.form-ttl {
+  line-height: 2;
+  margin-bottom: 10px;
+
+  font: {
+    size: 16px;
+    weight: bold;
+  }
+
+  &.has-tag {
+    &:after {
+      width: 30px;
+      line-height: 18px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 2px;
+      color: #fff;
+      margin-left: 15px;
+      vertical-align: middle;
+      margin-bottom: 3px;
+
+      font: {
+        size: 10px;
+        weight: bold;
+      }
+    }
+
+    &.required {
+      &:after {
+        content: "必須";
+        background: $primary;
+      }
+    }
+
+    &.optional {
+      font-weight: normal;
+      &:after {
+        content: "任意";
+        background: #999;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+.input-wrapper01 {
+  @include flex($j-content:space-between);
+  >.input-box {
+    width: calc(50% - 10px);
+    @media only screen and (max-width: $screen-tb) {
+      width: calc(50% - 5px);
+    }
+  }
+}
+
+.input-wrapper02 {
+  @include flex($j-content:space-between);
+  >.input-box {
+    width: 32%;
+    @media only screen and (max-width: $screen-tb) {
+      width: calc(33% - 5px);
+    }
+  }
+}
+
+//NICE SELECT
+.nice-select {
+  border-color: #ddd;
+  line-height: 43px;
+  height: 45px;
+  padding-left: 15px;
+  padding-right: 52px;
+
+  &:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 4px 0 4px;
+    border-color: #aaa transparent transparent transparent;
+    margin: 0;
+    transform-origin: center center;
+    transform: translateY(-50%);
+  }
+
+  &:hover,
+  &:focus,
+  &.open {
+    border-color: #ddd !important;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .option.selected {
+    font-weight: normal !important;
+  }
+
+  .option.focus,
+  .option:hover,
+  .option.selected.focus {
+    background: #f4faff !important;
+  }
+
+  &.open {
+    border: {
+      bottom-left-radius: 0 !important;
+      bottom-right-radius: 0 !important;
+    }
+    &:after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  .list {
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #ddd;
+    left: -1px !important;
+    margin-top: 1px !important;
+
+    li {
+      &:first-child {
+        border-top: none !important;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #ddd !important;
+      }
+    }
+
+    border: {
+      top: none !important;
+      top-left-radius: 0 !important;
+      top-right-radius: 0 !important;
+      bottom-left-radius: 3px !important;
+      bottom-right-radius: 3px !important;
+    }
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    padding-right: 32px;
+    line-height: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+}
+  
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #a8a8a8;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #a8a8a8;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #a8a8a8;
+}
+
+//追加ボタン
+.add-btn {
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  border: 1px dashed #ddd;
+  color: #7e7e7e;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px;
+  transition: all .3s ease;
+  font-size: 13px;
+
+  &:before {
+    content: "+";
+    display: inline-block;
+    margin-right: 7px;
+  }
+
+  &:hover {
+    background: #7e7e7e;
+    color: #fff;
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    padding: 6px;
+  }
+}
+
+//MODAL
+.blocker {
+  background-color: rgba(#000, 0.65) !important;
+  z-index: 9999 !important;
+  @media only screen and (max-width: $screen-tb) {
+    padding: 24px;
+  }
+}
+
+.modal {
+  padding: 60px 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
+
+  .modal-ttl {
+    text-align: center;
+    line-height: 1.68;
+    margin-bottom: 15px;
+
+    font: {
+      size: 22px;
+      weight: bold;
+    }
+
+    @media only screen and (max-width: $screen-tb) {
+      font-size: 18px;
+    }
+  }
+
+  .modal-content {
+    .txt {
+      font-size: 16px;
+      line-height: 2;
+      text-align: center;
+
+      @media only screen and (max-width: $screen-tb) {
+        font-size: 13px;
+        line-height: 1.61;
+      }
+    }
+  }
+
+  .close-modal {
+    top: 30px !important;
+    right: 30px !important;
+    width: 24px !important;
+    height: 24px !important;
+    background-image: url(../../img/bg/btn_close.png) !important;
+    @media only screen and (max-width: $screen-tb) {
+      top: 20px !important;
+      right: 20px !important;
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    width: 100%;
+    padding: 45px 25px;
+  }
+}
+
+//TITLE
+.ttl-wrapper {
+  margin-bottom: 25px;
+  @include flex($j-content:space-between, $a-items:center);
+
+  >p {
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    margin-bottom: 15px;
+  }
+}
+
+.common-ttl {
+  margin-bottom: 25px;
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.common-ttl02 {
+  margin-bottom: 20px;
+
+  font: {
+    size: 28px;
+    weight: bold;
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.common-ttl03 {
+  margin-bottom: 30px;
+  background: #f8f8f8;
+  padding: 11px 25px;
+
+  font: {
+    size: 17px;
+    weight: bold;
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+
+  body.dropdown-show & {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.dropdown-menu {
+  z-index: 1000;
+  display: none;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.16);
+  border-radius: 6px;
+  min-width: 230px;
+  background: #fff;
+
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    padding: 17px 20px;
+    border-bottom: 1px solid rgba(#000, 0.08);
+
+    @media only screen and (max-width: $screen-tb) {
+      text-align: center;
+      background: #fff;
+      padding: 16px 15px;
+      border-bottom: 1px solid #c6c6c6;
+
+      font: {
+        size: 14px;
+        weight: bold;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $screen-pc-min) {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: -30px;
+  }
+
+  @media only screen and (max-width: $screen-tb) {
+    background: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: none;
+    padding: 30px;
+
+    .menu-btns {
+      background-color: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .cancel {
+      margin-top: 13px;
+      >.dropdown-item {
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.dropdown-toggle {
+  width: 28px;
+  cursor: pointer;
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #f8f8f8;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    content: "";
+    z-index: -1;
+    border-radius: 50%;
+    transition: all .3s ease;
+  }
+
+  &:hover {
+    &:after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+.all-btn {
+  color: #c1c1c1;
+  @include flex($a-items:center);
+  padding: 3.5px 11px;
+  border-radius: 20px;
+  border: 1px solid #e2e2e2;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: url(../../img/bg/icon_plus.png) no-repeat center/contain;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  font: {
+    size: 10px;
+    weight: bold;
+  }
+}
+
+.edit-btn {
+  color: #1664b2;
+  font-size: 16px;
+
+  @media only screen and (max-width: $screen-tb) {
+    font-size: 11px;
+  }
+}
+
+input[type="file"] {
+  font-size: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+//TOGGLE BUTTON
+.check-toggle {
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+
+  >input[type="checkbox"] {
+    display: none;
+
+    &:checked+label {
+      background: #1664b2;
+      border: 1px solid #1664b2;
+
+      &:before {
+        left: 15px;
+        background: #fff;
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  >label {
+    height: 22px;
+    width: 37px;
+    border-radius: 20px;
+    background: #ccc;
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      transition: all .3s;
+    }
+  }
+}
+
+.toggle-wrapper {
+  .toggle-name {
+    margin-right: 10px;
+
+    font: {
+      size: 14px;
+      weight: bold;
+    }
+  }
+}

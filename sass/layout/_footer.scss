@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+footer {
+  .f-wrapper {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px 30px;
+    @include flex($j-content:space-between, $a-items:center);
+
+    .logo {
+      width: 100px;
+      @media only screen and (max-width: $screen-tb) {
+        width: 80px;
+      }
+    }
+
+    .copy {
+      font-size: 12px;
+      color: #999;
+    }
+
+    @media only screen and (max-width: $screen-tb) {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 0;
+    }
+  }
+}
